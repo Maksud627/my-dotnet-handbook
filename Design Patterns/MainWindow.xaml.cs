@@ -20,5 +20,15 @@ namespace Design_Patterns
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            LoggerMethod("Hello from the button!"); // Pass the desired message to LoggerMethod
+        }
+
+        public void LoggerMethod(string message)
+        {
+            Logger.Instance.Log(message);
+        }
     }
 }

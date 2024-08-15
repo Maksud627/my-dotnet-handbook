@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        
+        <Button Height="50" Width="100" x:Name="btnLogger" Click="Button_Click" Content="Log Message" Style="{StaticResource InformButton}"></Button>
 
     </Grid>
 </Window>

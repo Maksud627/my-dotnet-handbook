@@ -9,6 +9,7 @@ namespace Design_Patterns
     /// </summary>
     public partial class App : Application
     {
+        
     }
 
 }
