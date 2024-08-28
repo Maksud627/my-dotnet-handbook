@@ -8,8 +8,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Design_Patterns;
+using DesignPatterns.Factory_Method;
 
-namespace Design_Patterns
+namespace DesignPatterns
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,7 +25,12 @@ namespace Design_Patterns
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            LoggerMethod("Hello from the button!"); // Pass the desired message to LoggerMethod
+            //LoggerMethod("Hello from the button!"); // Pass the desired message to LoggerMethod
+            Logistics roadLogistics = new RoadLogistics();
+            roadLogistics.PlanDelivery();
+
+            Logistics seaLogistics = new SeaLogistics();
+            seaLogistics.PlanDelivery();
         }
 
         public void LoggerMethod(string message)

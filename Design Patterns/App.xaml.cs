@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows;
 
-namespace Design_Patterns
+namespace DesignPatterns
 {
     /// <summary>
     /// Interaction logic for App.xaml

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace Design_Patterns;
 
@@ -22,11 +23,16 @@ public class Logger
     // private constructor prevents external instantiation
     private Logger() { }
 
+    /*
+     * static creation method (acts as a constructor)
+     * this method calls private constructor to create an object and saves it,
+     * this will return any cached object if already created.
+     */
     public static Logger Instance
     {
         get
         {
-            if(_instance == null)
+            if (_instance == null)
             {
                 _instance = new Logger();
             }
