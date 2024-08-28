@@ -9,7 +9,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Design_Patterns;
-using DesignPatterns.Factory_Method;
+using Design_Patterns.CreationalPatterns.FactoryMethod;
 
 namespace DesignPatterns
 {
@@ -25,12 +25,30 @@ namespace DesignPatterns
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //LoggerMethod("Hello from the button!"); // Pass the desired message to LoggerMethod
-            Logistics roadLogistics = new RoadLogistics();
-            roadLogistics.PlanDelivery();
 
-            Logistics seaLogistics = new SeaLogistics();
-            seaLogistics.PlanDelivery();
+            //LoggerMethod("Hello from the button!"); // singleton
+
+            Console.WriteLine("Enter the type of pizza you want to order: (Sucuklu, Margherita, Pepperoni, Veggie)");
+            string pizzaType = Console.ReadLine();
+
+            try
+            {
+                Pizza pizza = PizzaFactory.CreatePizza(pizzaType);
+                pizza.Prepare();
+                pizza.Bake();
+                pizza.Cut();
+                pizza.Box();
+
+                Console.WriteLine($"{pizzaType} Pizza is ready to be served!");
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+
+            Console.ReadLine();
+
         }
 
         public void LoggerMethod(string message)

@@ -51,3 +51,6 @@ way to make a singleton class: 1. make the default constructor private (so that 
 
 #2: Factory method:
 
+	- Provides interface for creating objects.
+	- Creator class  to create objects
+	- 
