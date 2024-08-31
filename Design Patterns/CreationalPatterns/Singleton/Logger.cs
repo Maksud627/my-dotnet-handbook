@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
-namespace Design_Patterns;
+namespace Design_Patterns.CreationalPatterns.Singleton;
 
 /*
  * This is a logger service based on singleton pattern

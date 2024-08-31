@@ -8,8 +8,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Design_Patterns;
 using Design_Patterns.CreationalPatterns.FactoryMethod;
+using Design_Patterns.CreationalPatterns.Singleton;
 
 namespace DesignPatterns
 {
@@ -40,7 +40,6 @@ namespace DesignPatterns
                 pizza.Box();
 
                 Console.WriteLine($"{pizzaType} Pizza is ready to be served!");
-
             }
             catch (Exception ex)
             {

@@ -13,16 +13,19 @@ namespace Design_Patterns.CreationalPatterns.FactoryMethod
         public void Bake()
         {
             Console.WriteLine("Pizza is being baked.");
+            Thread.Sleep(1000);
         }
 
         public void Cut()
         {
             Console.WriteLine("Pizza is being cut.");
+            Thread.Sleep(1000);
         }
 
         public void Box()
         {
             Console.WriteLine("Pizza is being boxed.");
+            Thread.Sleep(1000);
         }
     }
 }

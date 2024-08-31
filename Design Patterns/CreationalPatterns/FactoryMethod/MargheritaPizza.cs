@@ -11,7 +11,7 @@ namespace Design_Patterns.CreationalPatterns.FactoryMethod
         public override void Prepare()
         {
             Console.WriteLine("Preparing Margherita Pizza with tomato, mozzarella, and basil.");
-            Thread.Sleep(5000);
+            Thread.Sleep(1000);
         }
     }
 }
