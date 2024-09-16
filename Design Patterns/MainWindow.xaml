@@ -7,8 +7,15 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
-        <Button Height="50" Width="100" x:Name="btnLogger" Click="Button_Click" Content="Log Message" Style="{StaticResource InformButton}"></Button>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button Height="50" Width="100" Grid.Row="0" x:Name="btnLogger" Click="Button_Click" Content="Log Message" Style="{StaticResource InformButton}"></Button>
+        <Button Height="50" Width="100" Grid.Row="1" x:Name="btnFactory" Click="btnFactory_Click" Content="Factory Method" Style="{StaticResource InformButton}"></Button>
+        <Button Height="50" Width="100" Grid.Row="2" x:Name="btnBuilder" Click="btnBuilder_Click" Content="Builder Pattern" Style="{StaticResource InformButton}"></Button>
 
     </Grid>
 </Window>

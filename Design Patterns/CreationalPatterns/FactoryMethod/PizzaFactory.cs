@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Design_Patterns.CreationalPatterns.FactoryMethod
 {
+    // main factory class that returns crated object to client
     public class PizzaFactory
     {
+        // main factory method that creates the pizza
         public static Pizza CreatePizza(string type)
         {
             switch(type)

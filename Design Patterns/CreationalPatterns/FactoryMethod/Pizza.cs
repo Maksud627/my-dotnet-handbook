@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Design_Patterns.CreationalPatterns.FactoryMethod
 {
+    // abstract class that will return a pizza
     public abstract class Pizza
     {
         public abstract void Prepare();

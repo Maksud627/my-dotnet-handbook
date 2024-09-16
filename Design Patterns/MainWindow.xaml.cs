@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Design_Patterns.CreationalPatterns.BuilderPattern;
 using Design_Patterns.CreationalPatterns.FactoryMethod;
 using Design_Patterns.CreationalPatterns.Singleton;
 
@@ -45,14 +46,25 @@ namespace DesignPatterns
             {
                 Console.WriteLine($"Error: {ex.Message}");
             }
-
             Console.ReadLine();
-
         }
 
         public void LoggerMethod(string message)
         {
             Logger.Instance.Log(message);
+        }
+
+        private void btnFactory_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnBuilder_Click(object sender, RoutedEventArgs e)
+        {
+            // set values to builder class
+            HouseBuilder houseBuilder = new HouseBuilder();
+            var oneStoryHouse = new HouseBuilder().SetStoryHt(1).SetDoorType("Single Door").SetRoofType("Pointy Roof").Build();
+            var twoStoryHouse = new HouseBuilder().SetStoryHt(2).SetDoorType("Double Door").SetRoofType("Flat Roof").Build();
         }
     }
 }
