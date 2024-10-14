@@ -11,11 +11,5 @@ namespace Design_Patterns.CreationalPatterns.BuilderPattern
         public int? storyHt { get; set; }
         public string? roofType { get; set; }
         public string? doorType { get; set; }
-
-        /*public House(HouseBuilder houseBuilder)
-        {
-            //return houseBuilder;
-        }*/
-
     }
 }

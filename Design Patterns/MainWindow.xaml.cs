@@ -62,7 +62,6 @@ namespace DesignPatterns
         private void btnBuilder_Click(object sender, RoutedEventArgs e)
         {
             // set values to builder class
-            HouseBuilder houseBuilder = new HouseBuilder();
             var oneStoryHouse = new HouseBuilder().SetStoryHt(1).SetDoorType("Single Door").SetRoofType("Pointy Roof").Build();
             var twoStoryHouse = new HouseBuilder().SetStoryHt(2).SetDoorType("Double Door").SetRoofType("Flat Roof").Build();
         }
